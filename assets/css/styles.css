@@ -18,6 +18,9 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+button {
+  font-family: inherit;
+}
 /* =========== Common ============ */
 a {
   text-decoration: none;
@@ -41,6 +44,7 @@ a {
 }
 .btn:hover {
   opacity: 0.7;
+  cursor: pointer;
 }
 
 .main-content {
@@ -53,6 +57,55 @@ a {
   display: flex;
 }
 
+.round-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #171100;
+}
+
+.heading.lv1 {
+  font-size: 5.8rem;
+  line-height: 1.17;
+}
+
+.heading.lv2 {
+  font-size: 3.8rem;
+  line-height: 1.26;
+}
+.desc {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #5f5b53;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp.line2 {
+  --line-clamp: 2;
+}
+
+.break-all {
+  word-break: break-all;
+}
 /* ============ Header ============== */
 
 .header.fixed {
@@ -141,7 +194,7 @@ a {
   position: absolute;
   right: 0;
   bottom: 48px;
-  padding: 28px 24px;
+  padding: 24px;
   border-radius: 12px;
   background: #fff;
   box-shadow: 0px 16px 32px 0px;
@@ -149,10 +202,11 @@ a {
 }
 .hero-summary .item {
   display: flex;
+  align-items: center;
 }
 
 .hero-summary .item + .item {
-  margin-top: 22px;
+  margin-top: 14px;
 }
 
 .hero-summary .icon {
@@ -196,20 +250,8 @@ a {
   padding: 64px 0 0 130px;
 }
 
-.hero .heading {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 5.8rem;
-  line-height: 1.17;
-  letter-spacing: -0.02em;
-  color: #171100;
-}
-
 .hero .desc {
   margin-top: 22px;
-  font-size: 1.8rem;
-  line-height: 1.67;
-  color: #5f5b53;
 }
 
 .hero .cta-group {
@@ -234,12 +276,6 @@ a {
 }
 
 .hero .watch-video .icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
   background: #ffffff;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
 }
@@ -253,7 +289,7 @@ a {
 }
 
 .hero .stats {
-  margin: 8px 0 0 -28px;
+  margin: 8px 0 -28px;
 }
 
 .hero .stats strong {
@@ -263,4 +299,191 @@ a {
   font-size: 4.4rem;
   line-height: 1.23;
   color: #171100;
+}
+
+/* ============ Popular ============ */
+.popular {
+  padding: 65px 0;
+  margin-top: 135px;
+}
+
+.popular-top {
+  justify-content: space-between;
+}
+
+.popular-top .desc {
+  margin-top: 16px;
+  width: 458px;
+}
+
+.popular-top .controls {
+  gap: 18px;
+  align-items: center;
+}
+
+.popular .control-btn {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background: transparent;
+}
+.popular-top .control-btn:hover {
+  color: #fff;
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
+.popular .course-list {
+  gap: 30px;
+  margin-top: 55px;
+}
+
+.popular .course-item {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #e2dfda;
+  border-radius: 12px;
+}
+
+.popular .course-item:hover {
+  border-color: transparent;
+  box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
+}
+
+.popular .course-item .thumb {
+  width: calc(100% + 2px);
+  height: 278px;
+  margin: -1px;
+  object-fit: cover;
+  border-radius: 12px 12px 0px 0px;
+  -webkit-border-radius: 12px 12px 0px 0px;
+  -moz-border-radius: 12px 12px 0px 0px;
+  -ms-border-radius: 12px 12px 0px 0px;
+  -o-border-radius: 12px 12px 0px 0px;
+}
+
+.popular .course-item .info {
+  padding: 16px 22px 22px;
+}
+
+.popular .course-item .rating,
+.popular .course-item .foot,
+.popular .course-item .head {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popular .course-item .title {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #171100;
+}
+
+.popular .rating .value {
+  margin-left: 6px;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: var(--primary-color);
+}
+
+.popular .course-item .desc {
+  margin-top: 6px;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+
+.popular .course-item .foot {
+  margin-top: 12px;
+}
+
+.popular .course-item .price {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #171100;
+}
+
+.popular .course-item .book-btn {
+  border: none;
+}
+
+.popular .course-item .book-btn:hover {
+  color: #fff;
+  background: var(--primary-color);
+}
+
+/* ============ Feedback ============= */
+.feedback {
+  padding: 96px 0;
+  background: #2e2100;
+  margin-top: 135px;
+}
+
+.feedback .avatar {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.feedback .title {
+  font-family: var(--font-heading);
+  color: #f7f7f7;
+  margin-top: 18px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.42;
+}
+
+.feedback .desc {
+  margin-top: 4px;
+  font-size: 1.4rem;
+  line-height: 1.85;
+}
+
+.feedback-list {
+  overflow: hidden;
+}
+
+.feedback-item .dots {
+  margin-top: 28px;
+  gap: 6px;
+}
+
+.feedback-item {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.feedback-item .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #634700;
+  cursor: pointer;
+}
+.feedback-item .dot:hover {
+  background-color: var(--primary-color);
+}
+
+.feedback-item .dot.active {
+  background: #ffb900;
+  cursor: default;
+}
+
+.feedback-item .content {
+  width: 66%;
+  margin-left: auto;
+}
+
+.feedback-item blockquote {
+  margin-left: 30px;
+  font-style: italic;
+  font-size: 2.6rem;
+  line-height: 1.54;
+  color: #ffffff;
 }
