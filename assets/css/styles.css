@@ -580,6 +580,8 @@ a {
   display: flex;
   gap: 30px;
   margin-top: 55px;
+  overflow-x: clip;
+  overflow-clip-margin: 20px;
 }
 
 .blog .item {
@@ -652,4 +654,91 @@ a {
   gap: 6px;
   justify-content: center;
   margin-top: 38px;
+}
+/* ================= Footer =============== */
+.footer {
+  padding: 96px 135px 0;
+  background: #2e2100;
+}
+.footer .row .column:first-child {
+  width: 35%;
+}
+
+.footer .row .column {
+  width: 21.6%;
+}
+
+.footer .row {
+  padding-bottom: 38px;
+  border-bottom: 1px solid #59554b;
+}
+
+.footer .desc {
+  margin: 18px 0;
+  font-size: 1.4rem;
+  max-width: 267px;
+  line-height: 1.86;
+  color: #bfbcb2;
+}
+
+.footer .socials {
+  display: flex;
+  gap: 10px;
+}
+
+.footer .title {
+  display: inline-block;
+  padding: 0 48px 14px 0;
+  border-bottom: 1px solid #59554b;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #ffffff;
+}
+
+.footer .list {
+  margin-top: 28px;
+}
+
+.footer .list a {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: #bfbcb2;
+}
+
+.footer .list li:last-child a {
+  margin-bottom: 0;
+}
+
+.footer .list strong {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.footer .copyright {
+  padding: 28px 0;
+}
+
+.footer .copyright p {
+  font-size: 1.4rem;
+  line-height: 1.86;
+  text-align: center;
+  color: #807d74;
+}
+
+/* ========== Animation =========s */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
