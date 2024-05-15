@@ -1,0 +1,16 @@
+{
+  "name": "project2",
+  "description": "Education UI Design",
+  "version": "1.0.0",
+  "main": "javascript.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwinds": "^3.4.3"
+  }
+}
