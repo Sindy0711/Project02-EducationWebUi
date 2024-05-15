@@ -3,14 +3,19 @@
   "description": "Education UI Design",
   "version": "1.0.0",
   "main": "javascript.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:css": "npx tailwindcss -i ./assets/css/styles.css -o ./assets/css/output.css --watch",
+    "start:dev": "live-server index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "tailwinds": "^3.4.3"
+    "live-server": "^1.2.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3"
   }
 }
