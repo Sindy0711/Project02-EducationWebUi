@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "main": "javascript.js",
   "scripts": {
-    "start:css": "npx tailwindcss -i ./assets/css/styles.css -o ./assets/css/output.css --watch",
-    "start:dev": "live-server index.html"
+    "start:css": "npx tailwindcss -i ./assets/css/styles.css -o ./public/output.css --watch",
+    "start:dev": "live-server public"
   },
   "keywords": [],
   "author": "",
